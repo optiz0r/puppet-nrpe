@@ -102,6 +102,8 @@ class nrpe (
     owner   => $nrpe::params::user,
     group   => $nrpe::params::group,
     mode    => '0755',
+    purge   => true,
+    recurse => true,
     notify  => Service['nrpe'];
   }
 }
